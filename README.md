@@ -34,7 +34,7 @@ Silahkan tuliskan kode seperti dibawah ini pada bagian `dev_dependencies` file `
 di project anda
 
 ```dart
-  banned_setstate_lint:
+banned_setstate_lint:
     git:
       url: https://github.com/AlvinSanudharma/banned_setstate_lint.git
 ```
