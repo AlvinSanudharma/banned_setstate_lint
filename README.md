@@ -13,11 +13,11 @@ and the Flutter guide for
 
 # 🔒 Banned setState linter
 
-Custom Linter untuk **melarang penggunaan `setState()`** pada proyek Flutter.
+Custom Linter untuk **melarang penggunaan `setState()`** pada project Flutter.
 
 ## 🚨 Tujuan
 
-Penggunaan `setState()` dalam proyek Flutter berskala menengah hingga besar dapat menyebabkan:
+Penggunaan `setState()` dalam project Flutter berskala menengah hingga besar dapat menyebabkan:
 
 - Rebuild tidak efisien
 - Campuran logic dan UI
@@ -28,7 +28,7 @@ Linter ini membantu tim developer untuk **konsisten menggunakan state management
 
 ## 🛠 Cara Pakai
 
-### 1. Tambahkan ke proyek lint kamu
+### 1. Tambahkan linter ke project anda
 
 Silahkan tuliskan kode seperti dibawah ini pada bagian `dev_dependencies` file `pubspec.yaml`
 di project anda
@@ -49,7 +49,7 @@ plugins:
     - custom_lint
 ```
 
-Lalu tambahkan kode seperti dibawah ini (sejajar dengan bagian`linter`)
+Lalu tambahkan kode seperti dibawah ini (sejajar dengan bagian `linter`)
 di project anda
 
 ```dart
