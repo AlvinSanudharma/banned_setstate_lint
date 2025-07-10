@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-# 🔒 Banned setState lint
+# 🔒 Banned setState linter
 
 Custom Linter untuk **melarang penggunaan `setState()`** pada proyek Flutter.
 
