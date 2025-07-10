@@ -1,39 +1,59 @@
-<!-- 
+<!--
 This README describes the package. If you publish this package to pub.dev,
 this README's contents appear on the landing page for your package.
 
 For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages). 
+[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
 
 For general information about developing packages, see the Dart guide for
 [creating packages](https://dart.dev/guides/libraries/create-packages)
 and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages). 
+[developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# 🔒 Banned setState lint
 
-## Features
+Custom Linter untuk **melarang penggunaan `setState()`** pada proyek Flutter.
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## 🚨 Tujuan
 
-## Getting started
+Penggunaan `setState()` dalam proyek Flutter berskala menengah hingga besar dapat menyebabkan:
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+- Rebuild tidak efisien
+- Campuran logic dan UI
+- Sulit di-maintain dan di-test
+- Tidak scalable
 
-## Usage
+Linter ini membantu tim developer untuk **konsisten menggunakan state management yang lebih baik** seperti Bloc, Riverpod, Provider, dsb., dengan **mencegah penggunaan `setState()`** secara otomatis saat proses analisis kode.
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+## 🛠 Cara Pakai
+
+### 1. Tambahkan ke proyek lint kamu
+
+Silahkan tuliskan kode seperti dibawah ini pada bagian `dev_dependencies` file `pubspec.yaml`
+di project anda
 
 ```dart
-const like = 'sample';
+  banned_setstate_lint:
+    git:
+      url: https://github.com/AlvinSanudharma/banned_setstate_lint.git
 ```
 
-## Additional information
+### 2. Edit file `analysis_options.yaml`
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+Silahkan tambahkan kode seperti dibawah ini pada bagian `analyzer:` file `analysis_options.yaml`
+di project anda
+
+```dart
+plugins:
+    - custom_lint
+```
+
+Lalu tambahkan kode seperti dibawah ini (sejajar dengan bagian`linter`)
+di project anda
+
+```dart
+custom_lint:
+  rules:
+    - banned_setstate_lint: true
+```
