@@ -26,7 +26,8 @@ class BanSetState extends DartLintRule {
   BanSetState() : super(code: _code);
   static const _code = LintCode(
     name: 'ban_set_state',
-    problemMessage: "Don't use setState, use bloc instead",
+    problemMessage:
+        "Don't use setState. Please use Bloc or another state management approach for better scalability and testability.",
   );
 
   @override
